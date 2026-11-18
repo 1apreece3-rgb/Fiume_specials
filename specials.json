@@ -1,0 +1,231 @@
+[
+  {
+    "id": "braised-lamb-shank",
+    "name": "Braised Lamb Shank",
+    "price": 36.95,
+    "date": "",
+    "description": "Braised lamb shank with creamy mashed potato and a butter bean and chorizo sauce.",
+    "ingredients": [
+      "Lamb shank",
+      "Mashed potato",
+      "Butter beans",
+      "Chorizo"
+    ],
+    "plating": "Shank stood upright on a bed of mash, with the bean and chorizo sauce spooned around one side and a pile of greens and rocket on the other. Finished with a balsamic drizzle and crispy onion crumb on a speckled stoneware plate.",
+    "photos": [
+      "media/lamb-shank-1.jpg"
+    ],
+    "videos": [
+      "media/lamb-shank.mp4"
+    ]
+  },
+  {
+    "id": "burrata-parma-gnocco-fritto",
+    "name": "Burrata, Parma Ham and Gnocco Fritto",
+    "course": "Starter",
+    "price": 13.5,
+    "date": "",
+    "description": "Starter of burrata with Parma ham and gnocco fritto.",
+    "ingredients": [
+      "Burrata",
+      "Parma ham",
+      "Gnocco fritto"
+    ],
+    "plating": "Burrata opened on a dark plate with folds of Parma ham around it, herb oil and greens over the top, and the gnocco fritto laid alongside.",
+    "photos": [
+      "media/burrata-2.jpg"
+    ],
+    "videos": [
+      "media/burrata.mp4"
+    ]
+  },
+  {
+    "id": "gnocchi-beef-mushroom",
+    "name": "Gnocchi with Beef, Mushrooms and Red Wine",
+    "price": 18.5,
+    "date": "",
+    "description": "Gnocchi with beef and mushrooms in a red wine sauce, topped with a gorgonzola cream.",
+    "ingredients": [
+      "Gnocchi",
+      "Beef",
+      "Mushrooms",
+      "Red wine",
+      "Gorgonzola"
+    ],
+    "plating": "Served in a patterned bowl, finished with grated cheese and micro herbs.",
+    "photos": [
+      "media/gnocchi-2.jpg"
+    ],
+    "videos": [
+      "media/gnocchi.mp4"
+    ]
+  },
+  {
+    "id": "lobster-tagliatelle",
+    "name": "Lobster Tagliatelle",
+    "price": 38.95,
+    "date": "",
+    "description": "Tagliatelle with lobster in a spicy tomato sauce.",
+    "ingredients": [
+      "Lobster",
+      "Tagliatelle",
+      "Tomato",
+      "Chilli"
+    ],
+    "plating": "Tagliatelle twisted onto a speckled stoneware plate, with the lobster tail and claws set over the top and finished with fresh basil.",
+    "photos": [
+      "media/lobster-2.jpg"
+    ],
+    "videos": [
+      "media/lobster.mp4"
+    ]
+  },
+  {
+    "id": "t-bone-steak",
+    "name": "20oz T-Bone Steak",
+    "price": 65,
+    "date": "",
+    "description": "20oz T-bone steak with herby truffle fries, mushroom pasta and peppercorn sauce.",
+    "ingredients": [
+      "T-bone steak",
+      "Truffle fries",
+      "Herbs",
+      "Mushroom pasta",
+      "Peppercorn sauce"
+    ],
+    "plating": "Steak sliced on a wooden board with rocket and shaved cheese, with the mushroom pasta and peppercorn sauce served alongside in their own pots.",
+    "photos": [
+      "media/tbone-2.jpg"
+    ],
+    "videos": [
+      "media/tbone.mp4"
+    ]
+  },
+  {
+    "id": "rack-of-lamb",
+    "name": "Rack of Lamb",
+    "price": 38.95,
+    "date": "",
+    "description": "Rack of lamb on a butternut squash puree with cubed potatoes and sauteed spinach, finished with a blueberry sauce.",
+    "ingredients": [
+      "Rack of lamb",
+      "Butternut squash",
+      "Potatoes",
+      "Spinach",
+      "Blueberries"
+    ],
+    "plating": "Squash puree swept across the plate, potatoes and greens on top, then the lamb cutlets stacked with bones up and the blueberry sauce spooned over. Finished with toasted seeds.",
+    "photos": [
+      "media/rack-lamb-1.jpg"
+    ],
+    "videos": [
+      "media/rack-lamb-a.mp4",
+      "media/rack-lamb-b.mp4"
+    ]
+  },
+  {
+    "id": "lobster-ravioli",
+    "name": "Lobster Ravioli with Langoustines",
+    "price": 26.95,
+    "date": "",
+    "description": "Lobster-filled ravioli in a prawn and 'nduja sauce, topped with langoustines.",
+    "ingredients": [
+      "Lobster",
+      "Ravioli",
+      "Prawns",
+      "'Nduja",
+      "Langoustines"
+    ],
+    "plating": "Ravioli and prawns in the sauce on a white plate, with the langoustines laid over the top and finished with pea shoots.",
+    "photos": [
+      "media/ravioli-2.jpg"
+    ],
+    "videos": [
+      "media/ravioli-a.mp4",
+      "media/ravioli-b.mp4"
+    ]
+  },
+  {
+    "id": "stuffed-sea-bass",
+    "name": "Whole Stuffed Sea Bass",
+    "price": 32.95,
+    "date": "",
+    "description": "A whole boneless sea bass, stuffed and roasted, served with crushed potatoes tossed with mint and peas, a saffron salad and topped with salsa verde.",
+    "ingredients": [
+      "Sea bass",
+      "Potatoes",
+      "Mint",
+      "Peas",
+      "Saffron",
+      "Salsa verde"
+    ],
+    "plating": "The whole fish laid across the plate with the salsa verde spread along the top, and the minted pea potatoes served alongside.",
+    "photos": [
+      "media/seabass-2.jpg"
+    ],
+    "videos": [
+      "media/seabass-a.mp4",
+      "media/seabass-b.mp4"
+    ]
+  },
+  {
+    "id": "seafood-mixed-grill",
+    "name": "Seafood Mixed Grill",
+    "price": "Market price",
+    "date": "",
+    "description": "A mixed grill of assorted seafood. The selection and price change depending on the fish available.",
+    "ingredients": [
+      "Assorted seafood"
+    ],
+    "plating": "Served in a large pan for sharing, piled with mussels, squid rings and king prawns, with samphire and cherry tomatoes through it.",
+    "photos": [
+      "media/mixed-grill-2.jpg"
+    ],
+    "videos": [
+      "media/mixed-grill-a.mp4",
+      "media/mixed-grill-b.mp4"
+    ]
+  },
+  {
+    "id": "pan-seared-cod",
+    "name": "Pan-Seared Cod",
+    "price": 34.95,
+    "date": "",
+    "description": "Pan-seared cod on a bed of parsnip puree with pan-seared leek and a red pepper sauce.",
+    "ingredients": [
+      "Cod",
+      "Parsnip",
+      "Leek",
+      "Red pepper"
+    ],
+    "plating": "Cod set on a round of parsnip puree with the charred leek leaning against it, the pepper sauce spooned over the fish and a tall nest of pea shoots on top.",
+    "photos": [
+      "media/cod-1.jpg"
+    ],
+    "videos": [
+      "media/cod-a.mp4"
+    ]
+  },
+  {
+    "id": "gnocchi-beef-nduja",
+    "name": "Gnocchi with Beef, Mushrooms and 'Nduja",
+    "price": 19.99,
+    "date": "",
+    "description": "Gnocchi with beef and mushrooms in a spicy 'nduja cream sauce, topped with 'nduja cream and chilli flakes.",
+    "ingredients": [
+      "Gnocchi",
+      "Beef",
+      "Mushrooms",
+      "'Nduja",
+      "Cream",
+      "Chilli flakes"
+    ],
+    "plating": "Served on a speckled stoneware plate, dotted with 'nduja cream and finished with chilli flakes, grated cheese and pea shoots.",
+    "photos": [
+      "media/gnocchi-nduja-1.jpg"
+    ],
+    "videos": [
+      "media/gnocchi-nduja.mp4"
+    ]
+  }
+]

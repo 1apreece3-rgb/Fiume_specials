@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiume Specials</title>
+<link rel="manifest" href="manifest.webmanifest?v=3">
+<meta name="theme-color" content="#a4462b">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v3.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v3.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fiume Specials">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f2ea;
+    --card: #fffdf9;
+    --ink: #2b2420;
+    --muted: #7a6d63;
+    --line: #e6dccf;
+    --accent: #a4462b;
+    --accent-soft: #f3e1d8;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  header { padding: 40px 0 20px; text-align: center; }
+  .logo { display: block; width: 100%; max-width: 280px; height: auto; margin: 0 auto 18px; }
+  .eyebrow {
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600; font-size: clamp(38px, 7vw, 56px);
+    line-height: 1.05; margin: 8px 0 6px;
+  }
+  .sub { color: var(--muted); margin: 0; }
+
+  .install {
+    margin-top: 14px; background: var(--accent); color: #fff; border: 0; border-radius: 999px;
+    padding: 9px 18px; font: inherit; font-weight: 600; font-size: 14px; cursor: pointer;
+  }
+  .install[hidden], .install-hint[hidden] { display: none; }
+  .install-hint { color: var(--muted); font-size: 13px; margin: 12px auto 0; max-width: 320px; }
+  .toolbar { display: flex; justify-content: center; margin: 18px 0 28px; }
+  .search {
+    width: 100%; max-width: 420px; padding: 11px 16px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--card); font: inherit; color: var(--ink);
+  }
+  .search:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+  .grid {
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    padding-bottom: 60px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); overflow: hidden; cursor: pointer;
+    display: flex; flex-direction: column; text-align: left;
+    padding: 0; font: inherit; color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(60,40,20,.08); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .thumb { aspect-ratio: 3 / 4; background: var(--accent-soft); width: 100%; object-fit: cover; display: block; }
+  .thumb.empty { display: grid; place-items: center; color: var(--accent); font-family: "Cormorant Garamond", serif; font-size: 22px; }
+  .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; }
+  .card-top { display: flex; flex-direction: column; gap: 2px; }
+  .card h2 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: 21px; line-height: 1.15; margin: 0;
+  }
+  .price { color: var(--accent); font-weight: 600; white-space: nowrap; }
+  .date { color: var(--muted); font-size: 13px; }
+  .snippet {
+    color: var(--muted); font-size: 14px; margin: 4px 0 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  .empty-state, .error {
+    text-align: center; color: var(--muted); padding: 60px 20px;
+    border: 1px dashed var(--line); border-radius: var(--radius);
+  }
+
+  /* Detail view */
+  .detail { display: none; padding-bottom: 60px; }
+  body.viewing .detail { display: block; }
+  body.viewing .list-view { display: none; }
+  .back {
+    background: none; border: 0; color: var(--accent); font: inherit; font-weight: 500;
+    cursor: pointer; padding: 20px 0; display: inline-flex; gap: 6px; align-items: center;
+  }
+  .detail-grid { display: grid; gap: 32px; grid-template-columns: 1.25fr 1fr; align-items: start; }
+  @media (max-width: 760px) { .detail-grid { grid-template-columns: 1fr; gap: 20px; } }
+  .main-photo {
+    width: 100%; height: auto; max-height: 82vh; object-fit: contain; border-radius: var(--radius);
+    background: #1d1916; display: block;
+  }
+  div.main-photo { aspect-ratio: 3 / 4; }
+  .thumbs { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .thumbs button {
+    padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden;
+    cursor: pointer; background: none; width: 72px; height: 54px;
+  }
+  .thumbs button.active { border-color: var(--accent); }
+  .thumbs img, .thumbs video { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  .thumbs button { position: relative; }
+  .play {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    color: #fff; font-size: 16px; background: rgba(0,0,0,.25);
+  }
+  .thumb-wrap { position: relative; }
+  .badge {
+    position: absolute; left: 10px; bottom: 10px; background: rgba(43,36,32,.75);
+    color: #fff; font-size: 12px; font-weight: 500; padding: 3px 9px; border-radius: 999px;
+  }
+  .dl {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+    padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--card); color: var(--accent); font-weight: 500; font-size: 14px;
+    text-decoration: none;
+  }
+  .dl:hover { border-color: var(--accent); }
+  video.main-photo { background: #000; object-fit: contain; }
+  .detail h2 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: clamp(32px, 5vw, 44px); line-height: 1.05; margin: 4px 0 8px;
+  }
+  .detail .price { font-size: 22px; }
+  .meta { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 18px; }
+  .section-label {
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin: 22px 0 6px;
+  }
+  .detail p { margin: 0 0 10px; white-space: pre-line; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
+  .tags li { background: var(--accent-soft); color: var(--ink); padding: 4px 11px; border-radius: 999px; font-size: 13px; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 0 0 30px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="icons/logo-wordmark.png" alt="Fiume Italian Restaurant" width="1000" height="418">
+      <h1>Specials</h1>
+      <p class="sub">What we served, how it was plated and what went into it.</p>
+      <button class="install" id="installBtn" type="button" hidden>⬇ Install app</button>
+      <p class="install-hint" id="iosHint" hidden>To install on iPhone: tap the Share button, then <b>Add to Home Screen</b>.</p>
+    </header>
+
+    <section class="list-view">
+      <div class="toolbar">
+        <input class="search" id="search" type="search" placeholder="Search dishes or ingredients" aria-label="Search specials">
+      </div>
+      <div id="list"><div class="empty-state">Loading specials…</div></div>
+    </section>
+
+    <section class="detail" id="detail" aria-live="polite"></section>
+
+    <footer>Fiume Italian Kitchen · Compton, Wolverhampton</footer>
+  </div>
+
+<script>
+(function () {
+  var specials = [];
+  var listEl = document.getElementById('list');
+  var detailEl = document.getElementById('detail');
+  var searchEl = document.getElementById('search');
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function fmtPrice(p) {
+    if (p === '' || p == null) return '';
+    var n = Number(p);
+    return isNaN(n) ? String(p) : '£' + n.toFixed(2);
+  }
+  function fmtDate(d) {
+    if (!d) return '';
+    var dt = new Date(d + 'T12:00:00');
+    if (isNaN(dt)) return String(d);
+    return dt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  function mediaOf(s) {
+    var p = (Array.isArray(s.photos) ? s.photos : []).map(function (src) { return { src: src, video: false }; });
+    var v = (Array.isArray(s.videos) ? s.videos : []).map(function (src) { return { src: src, video: true }; });
+    return p.concat(v);
+  }
+  function mediaTag(m, cls, alt, full) {
+    if (m.video) {
+      return full
+        ? '<video class="' + cls + '" src="' + esc(m.src) + '" controls playsinline preload="metadata"></video>'
+        : '<video class="' + cls + '" src="' + esc(m.src) + '#t=0.1" muted playsinline preload="metadata"></video>';
+    }
+    return '<img class="' + cls + '" loading="lazy" src="' + esc(m.src) + '" alt="' + esc(alt) + '">';
+  }
+
+  function renderList() {
+    var q = searchEl.value.trim().toLowerCase();
+    var items = specials.filter(function (s) {
+      if (!q) return true;
+      var hay = [s.name, s.description, s.method, (s.ingredients || []).join(' ')].join(' ').toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+    if (!specials.length) {
+      listEl.innerHTML = '<div class="empty-state">No specials added yet. Check back soon.</div>';
+      return;
+    }
+    if (!items.length) {
+      listEl.innerHTML = '<div class="empty-state">Nothing matches “' + esc(q) + '”.</div>';
+      return;
+    }
+    listEl.innerHTML = '<div class="grid">' + items.map(function (s) {
+      var media = mediaOf(s);
+      var hasVideo = media.some(function (m) { return m.video; });
+      var img = media.length
+        ? '<div class="thumb-wrap">' + mediaTag(media[0], 'thumb', s.name, false) +
+          (hasVideo ? '<span class="badge">▶ Video</span>' : '') + '</div>'
+        : '<div class="thumb empty">Fiume</div>';
+      return '<button class="card" data-id="' + esc(s.id) + '">' + img +
+        '<div class="card-body">' +
+          '<div class="card-top"><h2>' + esc(s.name) + '</h2><span class="price">' + esc(fmtPrice(s.price)) + '</span></div>' +
+          (s.date ? '<div class="date">' + esc(fmtDate(s.date)) + '</div>' : '') +
+          (s.description ? '<p class="snippet">' + esc(s.description) + '</p>' : '') +
+        '</div></button>';
+    }).join('') + '</div>';
+  }
+
+  function slug(t) { return String(t || 'special').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function dlLink(m, s, i) {
+    var ext = (m.src.split('.').pop() || 'jpg').toLowerCase();
+    var name = 'fiume-' + slug(s.name) + '-' + (i + 1) + '.' + ext;
+    return '<a class="dl" id="dlLink" href="' + esc(m.src) + '" download="' + esc(name) + '">⬇ Download ' + (m.video ? 'video' : 'photo') + '</a>';
+  }
+
+  function renderDetail(s) {
+    var media = mediaOf(s);
+    var gallery = media.length
+      ? '<div id="mainSlot">' + mediaTag(media[0], 'main-photo', s.name, true) + '</div>' +
+        '<div id="dlSlot">' + dlLink(media[0], s, 0) + '</div>' +
+        (media.length > 1
+          ? '<div class="thumbs">' + media.map(function (m, i) {
+              return '<button data-i="' + i + '" class="' + (i === 0 ? 'active' : '') + '" aria-label="' + (m.video ? 'Video ' : 'Photo ') + (i + 1) + '">' +
+                mediaTag(m, '', '', false) + (m.video ? '<span class="play">▶</span>' : '') + '</button>';
+            }).join('') + '</div>'
+          : '')
+      : '<div class="main-photo thumb empty">Fiume</div>';
+
+    var ingredients = (s.ingredients && s.ingredients.length)
+      ? '<div class="section-label">Ingredients</div><ul class="tags">' +
+        s.ingredients.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>'
+      : '';
+
+    detailEl.innerHTML =
+      '<button class="back" id="back">← All specials</button>' +
+      '<div class="detail-grid">' +
+        '<div>' + gallery + '</div>' +
+        '<div>' +
+          '<h2>' + esc(s.name) + '</h2>' +
+          '<div class="meta"><span class="price">' + esc(fmtPrice(s.price)) + '</span>' +
+            (s.date ? '<span class="date">' + esc(fmtDate(s.date)) + '</span>' : '') + '</div>' +
+          (s.description ? '<div class="section-label">About the dish</div><p>' + esc(s.description) + '</p>' : '') +
+          ingredients +
+          (s.method ? '<div class="section-label">How it was made</div><p>' + esc(s.method) + '</p>' : '') +
+          (s.plating ? '<div class="section-label">Plating</div><p>' + esc(s.plating) + '</p>' : '') +
+          (s.notes ? '<div class="section-label">Notes</div><p>' + esc(s.notes) + '</p>' : '') +
+        '</div>' +
+      '</div>';
+
+    document.getElementById('back').onclick = function () { location.hash = ''; showFromHash(); };
+    detailEl.querySelectorAll('.thumbs button').forEach(function (b) {
+      b.onclick = function () {
+        var i = Number(b.getAttribute('data-i'));
+        document.getElementById('mainSlot').innerHTML = mediaTag(media[i], 'main-photo', s.name, true);
+        document.getElementById('dlSlot').innerHTML = dlLink(media[i], s, i);
+        detailEl.querySelectorAll('.thumbs button').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+      };
+    });
+  }
+
+  function showFromHash() {
+    var id = (location.hash || '').replace(/^#/, '');
+    var s = id && specials.find(function (x) { return x.id === id; });
+    if (s) {
+      renderDetail(s);
+      document.body.classList.add('viewing');
+      window.scrollTo(0, 0);
+    } else {
+      document.body.classList.remove('viewing');
+      renderList();
+    }
+  }
+
+  listEl.addEventListener('click', function (e) {
+    var card = e.target.closest('.card');
+    if (card) { location.hash = card.getAttribute('data-id'); showFromHash(); }
+  });
+  searchEl.addEventListener('input', renderList);
+  window.addEventListener('hashchange', showFromHash);
+
+  fetch('specials.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      // Newest added first
+      specials = (Array.isArray(data) ? data : []).slice().reverse();
+      showFromHash();
+    })
+    .catch(function () {
+      listEl.innerHTML = '<div class="error">Couldn’t load the specials right now. Try refreshing.</div>';
+    });
+  // ---------- Install as an app ----------
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+  }
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  var deferred = null, installBtn = document.getElementById('installBtn');
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault(); deferred = e;
+    if (!standalone) installBtn.hidden = false;
+  });
+  installBtn.addEventListener('click', function () {
+    if (!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.then(function () { deferred = null; installBtn.hidden = true; });
+  });
+  window.addEventListener('appinstalled', function () { installBtn.hidden = true; });
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (isIOS && !standalone) document.getElementById('iosHint').hidden = false;
+})();
+</script>
+</body>
+</html>
