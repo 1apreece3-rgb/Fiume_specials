@@ -1,0 +1,291 @@
+{
+  "updated": "2026-11-25",
+  "bookings": [
+    {
+      "id": "2026-11-27-1730-laura-w",
+      "date": "2026-11-27", "time": "17:30", "guests": 20,
+      "name": "Laura W. / Naseeb K.",
+      "alerts": ["Rachel W.: nut allergy", "Nisha: gluten free for every course"],
+      "notes": ["Nisha asked for ice cream if available. Confirm her gluten-free dessert."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 7, "dish": "Breaded prawns", "guests": ["Helen", "Rachael W.", "Udi", "Yasmin", "Manisha", "Naseeb", "Niamh"] },
+          { "qty": 3, "dish": "Bruschetta", "guests": ["Barriya", "Sam", "Malini"] },
+          { "qty": 1, "dish": "Italian crêpe with mushrooms", "guests": ["Rachel W. [NUT ALLERGY]"] },
+          { "qty": 1, "dish": "Mushroom crêpe (GF)", "guests": ["Nisha [GF]"] },
+          { "qty": 8, "dish": "Pork arancini balls", "guests": ["Caroline", "Laura", "Cheree", "Tim", "Ilona", "Ant", "Prab", "Talvin"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 8, "dish": "Chicken breast sous vide", "guests": ["Helen", "Caroline", "Laura", "Cheree", "Ilona", "Ant", "Niamh", "Prab"] },
+          { "qty": 2, "dish": "Fillet of salmon", "guests": ["Barriya", "Udi"] },
+          { "qty": 2, "dish": "Fillet steak", "guests": ["Tim", "Talvin"] },
+          { "qty": 3, "dish": "Short pasta with mushrooms", "guests": ["Rachael W.", "Manisha", "Malini"] },
+          { "qty": 1, "dish": "Short pasta with mushrooms (GF)", "guests": ["Nisha [GF]"] },
+          { "qty": 1, "dish": "Short pasta with mushrooms, no honey drizzle", "guests": ["Yasmin"] },
+          { "qty": 3, "dish": "Short pasta with sausage", "guests": ["Rachel W. [NUT ALLERGY]", "Sam", "Naseeb"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 8, "dish": "Cheesecake of the day", "guests": ["Helen", "Caroline", "Tim", "Ilona", "Ant", "Niamh", "Malini", "Talvin"] },
+          { "qty": 8, "dish": "Profiteroles", "guests": ["Rachel W. [NUT ALLERGY]", "Barriya", "Udi", "Laura", "Yasmin", "Cheree", "Manisha", "Naseeb"] },
+          { "qty": 3, "dish": "Tiramisu", "guests": ["Rachael W.", "Sam", "Prab"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-11-27-2030-gurdeep-m",
+      "date": "2026-11-27", "time": "20:30", "guests": 15,
+      "name": "Gurdeep M.",
+      "alerts": ["Kanika: strict vegetarian and egg free", "Michelle: gluten free"],
+      "notes": ["Michelle was offered a GF Nutella crêpe for dessert. Confirm before plating."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 2, "dish": "Beef carpaccio", "guests": ["Sandy J.", "Rhia"] },
+          { "qty": 7, "dish": "Breaded prawns", "guests": ["Kiren S.", "Anita P.", "Ama B.", "Kiran", "Didi", "Rimi B.", "Parveen K."] },
+          { "qty": 4, "dish": "Bruschetta", "guests": ["Gurdeep M. [V]", "Raman [V]", "Cici", "Kanika [EGG FREE / V]"] },
+          { "qty": 1, "dish": "Gluten-free arancini", "guests": ["Michelle [GF]"] },
+          { "qty": 1, "dish": "Pulled pork", "guests": ["Dipika P."] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 6, "dish": "Chicken breast", "guests": ["Kiren S.", "Dipika P.", "Anita P.", "Kiran", "Parveen K.", "Cici"] },
+          { "qty": 4, "dish": "Fillet of salmon", "guests": ["Ama B.", "Didi", "Rimi B.", "Rhia"] },
+          { "qty": 1, "dish": "Fillet of salmon (GF)", "guests": ["Michelle [GF]"] },
+          { "qty": 1, "dish": "Pasta with spicy tomato sauce", "guests": ["Kanika [EGG FREE / V]"] },
+          { "qty": 2, "dish": "Short pasta with mushrooms", "guests": ["Gurdeep M. [V]", "Raman [V]"] },
+          { "qty": 1, "dish": "Steak", "guests": ["Sandy J."] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 4, "dish": "Cheesecake", "guests": ["Kiren S.", "Gurdeep M. [V]", "Dipika P.", "Raman [V]"] },
+          { "qty": 1, "dish": "Egg-free crêpe", "guests": ["Kanika [EGG FREE / V]"] },
+          { "qty": 1, "dish": "Profiteroles", "guests": ["Anita P."] },
+          { "qty": 8, "dish": "Tiramisu", "guests": ["Ama B.", "Sandy J.", "Kiran", "Didi", "Rimi B.", "Parveen K.", "Cici", "Rhia"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-11-29-1830-helen-c",
+      "date": "2026-11-29", "time": "18:30", "guests": 26,
+      "name": "Helen C. (Hamiltons)",
+      "alerts": ["Andy J.: nut allergy"],
+      "notes": ["Chris J. is choosing an individual starter. Hold his provisional platter.", "Libby N. and Richard N. have steak only, without prawns."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 3, "dish": "Bresaola", "guests": ["Tom L.", "Ben C.", "Richard N."] },
+          { "qty": 3, "dish": "Burrata", "guests": ["Liz L.", "Libby N.", "Louise T."] },
+          { "qty": 3, "dish": "Calamari fritti", "guests": ["Tom C.", "Robbie C.", "Mia W."] },
+          { "qty": 1, "dish": "Carpaccio", "guests": ["Jess B."] },
+          { "qty": 1, "dish": "Prawn cocktail", "guests": ["Andy H."] },
+          { "qty": 11, "dish": "Ravioli", "guests": ["Anna H.", "Helen C.", "Gurd K.", "Andy J. [NUT ALLERGY]", "Jin A.", "Lauren B.", "Bukola", "Mall P.", "Sarah N.", "Ruth", "Amy"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 4, "dish": "Chicken", "guests": ["Andy H.", "Dawn F.", "Rachael T.", "Sarah N."] },
+          { "qty": 3, "dish": "Lamb", "guests": ["Mia W.", "Jin A.", "Bukola"] },
+          { "qty": 2, "dish": "Seabass", "guests": ["Anna H.", "Ruth"] },
+          { "qty": 2, "dish": "Steak only (no prawns)", "guests": ["Libby N.", "Richard N."] },
+          { "qty": 15, "dish": "Surf n turf", "guests": ["Liz L.", "Tom L.", "Helen C.", "Ben C.", "Tom C.", "Robbie C.", "Gurd K.", "Chris J.", "Andy J. [NUT ALLERGY]", "Lauren B.", "Louise T.", "Mall P.", "Jess B.", "Helen W.", "Amy"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 4, "dish": "Cheeseboard", "guests": ["Helen C.", "Robbie C.", "Chris J.", "Mall P."] },
+          { "qty": 2, "dish": "Cheesecake", "guests": ["Mia W.", "Rachael T."] },
+          { "qty": 1, "dish": "Chocolate cheesecake", "guests": ["Gurd K."] },
+          { "qty": 4, "dish": "Lemon meringue", "guests": ["Liz L.", "Louise T.", "Dawn F.", "Bukola"] },
+          { "qty": 6, "dish": "Profiteroles", "guests": ["Anna H.", "Tom C.", "Libby N.", "Jin A.", "Sarah N.", "Richard N."] },
+          { "qty": 8, "dish": "Tiramisu", "guests": ["Andy H.", "Tom L.", "Andy J. [NUT ALLERGY]", "Lauren B.", "Jess B.", "Helen W.", "Ruth", "Amy"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-01-2015-francesca-k",
+      "date": "2026-12-01", "time": "20:15", "guests": 9,
+      "name": "Francesca K. (People Team)",
+      "alerts": [],
+      "notes": [],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 1, "dish": "Beef carpaccio", "guests": ["Francesca"] },
+          { "qty": 1, "dish": "Breaded prawns", "guests": ["Kelly"] },
+          { "qty": 3, "dish": "Bruschetta", "guests": ["Kal", "Lorraine", "Anne"] },
+          { "qty": 2, "dish": "Mushroom and mozzarella crêpe", "guests": ["Tricia", "Sarah"] },
+          { "qty": 2, "dish": "Pork arancini balls", "guests": ["Rachel", "Tracy"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 3, "dish": "Chicken", "guests": ["Kal", "Tricia", "Sarah"] },
+          { "qty": 4, "dish": "Fillet of salmon", "guests": ["Rachel", "Anne", "Tracy", "Francesca"] },
+          { "qty": 2, "dish": "Mushroom and walnut pasta", "guests": ["Lorraine", "Kelly"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 3, "dish": "Cheesecake", "guests": ["Kal", "Rachel", "Anne"] },
+          { "qty": 3, "dish": "Profiteroles", "guests": ["Tricia", "Sarah", "Tracy"] },
+          { "qty": 3, "dish": "Tiramisu", "guests": ["Lorraine", "Kelly", "Francesca"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-03-1600-kirstie-b",
+      "date": "2026-12-03", "time": "16:00", "guests": 16,
+      "name": "Kirstie B.",
+      "alerts": [],
+      "notes": ["John T. will order on arrival.", "Colin M. ordered a main only."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 3, "dish": "Arancine con pulled pork", "guests": ["Mark S.", "Jack P.", "Lydia J."] },
+          { "qty": 1, "dish": "Calamari fritti", "guests": ["Chris C."] },
+          { "qty": 3, "dish": "Crespella ai funghi e salsiccia", "guests": ["Darren G.", "Scott W.", "Paul W."] },
+          { "qty": 1, "dish": "Insalata noci barbabietola e caprino", "guests": ["Kirstie B."] },
+          { "qty": 1, "dish": "Mozzarella caprese", "guests": ["Sarah T."] },
+          { "qty": 4, "dish": "Pollo fritto", "guests": ["Martin H.", "Liam S.", "Rob B.", "Sian E."] },
+          { "qty": 1, "dish": "Polpette della nonna", "guests": ["Stuart G."] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 1, "dish": "Filetto dolcelatte", "guests": ["Scott W."] },
+          { "qty": 1, "dish": "Flambé di gamberoni", "guests": ["Darren G."] },
+          { "qty": 1, "dish": "Lasagna al forno", "guests": ["Colin M."] },
+          { "qty": 1, "dish": "Pasta con agnello brasato", "guests": ["Sian E."] },
+          { "qty": 1, "dish": "Pasta con salsiccia piccante", "guests": ["Mark S."] },
+          { "qty": 1, "dish": "Pasta del maresciallo", "guests": ["Lydia J."] },
+          { "qty": 1, "dish": "Pasta gamberi piccante", "guests": ["Sarah T."] },
+          { "qty": 1, "dish": "Pasta mare e monti", "guests": ["Kirstie B."] },
+          { "qty": 1, "dish": "Pizza diavola, no olives", "guests": ["Liam S."] },
+          { "qty": 1, "dish": "Pizza sorpresa", "guests": ["Jack P."] },
+          { "qty": 1, "dish": "Pollo al dolcelatte", "guests": ["Martin H."] },
+          { "qty": 2, "dish": "Rib eye funghi", "guests": ["Stuart G.", "Chris C."] },
+          { "qty": 1, "dish": "Scallopina ai funghi", "guests": ["Paul W."] },
+          { "qty": 1, "dish": "Swordfish", "guests": ["Rob B."] }
+        ]},
+        { "course": "Sides and extras", "items": [
+          { "qty": 1, "dish": "Patatine formaggiose", "guests": ["Jack P."] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-04-2000-chloe-b",
+      "date": "2026-12-04", "time": "20:00", "guests": 13,
+      "name": "Chloe B.",
+      "alerts": [],
+      "notes": ["Fillet steaks for Gill and Alan well done.", "Katie and George on the set-menu medium-rare default."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 8, "dish": "Arancini", "guests": ["Katie", "George", "Chloe", "Chris", "Wayne", "Liam", "Ava", "Gill"] },
+          { "qty": 2, "dish": "Beef carpaccio", "guests": ["Terry", "Alan"] },
+          { "qty": 2, "dish": "Italian crêpe", "guests": ["Lynne", "Nathan"] },
+          { "qty": 1, "dish": "Prawns", "guests": ["Jack"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 4, "dish": "Chicken breast", "guests": ["Jack", "Lynne", "Liam", "Ava"] },
+          { "qty": 2, "dish": "Fillet steak (medium rare)", "guests": ["Katie", "George"] },
+          { "qty": 2, "dish": "Fillet steak (well done)", "guests": ["Gill", "Alan"] },
+          { "qty": 3, "dish": "Salmon", "guests": ["Chris", "Terry", "Nathan"] },
+          { "qty": 1, "dish": "Sausage pasta", "guests": ["Wayne"] },
+          { "qty": 1, "dish": "Short pasta with mushrooms", "guests": ["Chloe"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 4, "dish": "Cheesecake", "guests": ["Jack", "Wayne", "Gill", "Alan"] },
+          { "qty": 6, "dish": "Profiteroles", "guests": ["George", "Lynne", "Terry", "Nathan", "Liam", "Ava"] },
+          { "qty": 3, "dish": "Tiramisu", "guests": ["Katie", "Chloe", "Chris"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-05-2030-gemma-h",
+      "date": "2026-12-05", "time": "20:30", "guests": 22,
+      "name": "Gemma H.",
+      "alerts": [],
+      "notes": ["Guest names requested. Numbers follow the guest order in the submitted sheet.", "Email confirms 5 December. The spreadsheet tab is labelled 7 December."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 6, "dish": "Arancini", "guests": ["#4", "#5", "#6", "#7", "#12", "#22"] },
+          { "qty": 2, "dish": "Bruschetta", "guests": ["#13", "#19"] },
+          { "qty": 1, "dish": "Carpaccio", "guests": ["#18"] },
+          { "qty": 2, "dish": "Crêpe", "guests": ["#3", "#10"] },
+          { "qty": 11, "dish": "Prawns", "guests": ["#1", "#2", "#8", "#9", "#11", "#14", "#15", "#16", "#17", "#20", "#21"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 8, "dish": "Chicken", "guests": ["#2", "#4", "#15", "#17", "#18", "#19", "#20", "#22"] },
+          { "qty": 1, "dish": "Fillet steak", "guests": ["#9"] },
+          { "qty": 6, "dish": "Italian sausage pasta", "guests": ["#1", "#6", "#8", "#10", "#13", "#14"] },
+          { "qty": 2, "dish": "Mushroom pasta", "guests": ["#3", "#16"] },
+          { "qty": 5, "dish": "Salmon", "guests": ["#5", "#7", "#11", "#12", "#21"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 10, "dish": "Cheesecake", "guests": ["#1", "#6", "#7", "#8", "#9", "#14", "#15", "#18", "#20", "#22"] },
+          { "qty": 7, "dish": "Profiteroles", "guests": ["#4", "#10", "#11", "#12", "#13", "#17", "#21"] },
+          { "qty": 5, "dish": "Tiramisu", "guests": ["#2", "#3", "#5", "#16", "#19"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-09-1800-marie-t",
+      "date": "2026-12-09", "time": "18:00", "guests": 13,
+      "name": "Marie T.",
+      "alerts": [],
+      "notes": ["Karl removed from all courses.", "Table back at 20:45."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 4, "dish": "Breaded prawns", "guests": ["Dean", "Kelly", "Stacey", "Rafael"] },
+          { "qty": 1, "dish": "Bruschetta", "guests": ["Josh"] },
+          { "qty": 3, "dish": "Italian crêpe", "guests": ["Krishna", "Alicia", "Sapphire"] },
+          { "qty": 5, "dish": "Pulled pork arancini", "guests": ["Paul", "James", "Caitlin", "Marie", "Mollie"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 3, "dish": "Chicken breast", "guests": ["James", "Mollie", "Kelly"] },
+          { "qty": 4, "dish": "Fillet steak", "guests": ["Paul", "Dean", "Stacey", "Alicia"] },
+          { "qty": 1, "dish": "Salmon", "guests": ["Sapphire"] },
+          { "qty": 1, "dish": "Short pasta with Italian sausage", "guests": ["Rafael"] },
+          { "qty": 4, "dish": "Short pasta with mushrooms", "guests": ["Caitlin", "Marie", "Josh", "Krishna"] }
+        ]},
+        { "course": "Desserts", "items": [
+          { "qty": 3, "dish": "Cheesecake", "guests": ["Paul", "Kelly", "Stacey"] },
+          { "qty": 3, "dish": "Profiteroles", "guests": ["Dean", "Alicia", "Rafael"] },
+          { "qty": 7, "dish": "Tiramisu", "guests": ["James", "Caitlin", "Marie", "Mollie", "Josh", "Krishna", "Sapphire"] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-12-1830-shander-h",
+      "date": "2026-12-12", "time": "18:30", "guests": 15,
+      "name": "Shander H. (collection)",
+      "provisional": true,
+      "guestsLabel": "portions",
+      "alerts": [],
+      "notes": ["Provisional. Collection around 18:30. Final quote and acceptance outstanding.", "Mashed potato, vegetables and creamy sauce with each portion.", "No additional or children's meals confirmed."],
+      "courses": [
+        { "course": "Mains", "items": [
+          { "qty": 15, "dish": "Chicken scaloppini", "guests": [] }
+        ]}
+      ]
+    },
+    {
+      "id": "2026-12-12-2030-charlie-t",
+      "date": "2026-12-12", "time": "20:30", "guests": 10,
+      "name": "Charlie T.",
+      "alerts": [],
+      "notes": ["Charlie and Andy share one antipasto per due.", "Jordan asked for no mash."],
+      "courses": [
+        { "course": "Starters", "items": [
+          { "qty": 1, "dish": "Antipasto per due (shared)", "guests": ["Charlie + Andy"] },
+          { "qty": 1, "dish": "Calamari fritti", "guests": ["Jordan"] },
+          { "qty": 1, "dish": "Crespella ai funghi e salsiccia", "guests": ["Dave"] },
+          { "qty": 1, "dish": "Mozzarella caprese", "guests": ["Ian"] },
+          { "qty": 3, "dish": "Pollo fritto", "guests": ["Rob", "Aaron", "Mark"] },
+          { "qty": 2, "dish": "Polpette della nonna", "guests": ["Tony", "Darryl"] }
+        ]},
+        { "course": "Mains", "items": [
+          { "qty": 2, "dish": "Cotoletta alla bolognese", "guests": ["Darryl", "Mark"] },
+          { "qty": 1, "dish": "Filetto ai funghi", "guests": ["Ian"] },
+          { "qty": 1, "dish": "Filetto ai funghi (no mash)", "guests": ["Jordan"] },
+          { "qty": 1, "dish": "Pasta ai gamberi piccante", "guests": ["Tony"] },
+          { "qty": 2, "dish": "Pasta alla bolognese", "guests": ["Rob", "Aaron"] },
+          { "qty": 2, "dish": "Pasta con agnello brasato", "guests": ["Charlie", "Andy"] },
+          { "qty": 1, "dish": "Pollo al dolcelatte", "guests": ["Dave"] }
+        ]},
+        { "course": "Sides and extras", "items": [
+          { "qty": 1, "dish": "Bruschetta al pomodoro", "guests": ["Tony"] },
+          { "qty": 1, "dish": "Patatine alle erbe + truffle", "guests": ["Jordan"] },
+          { "qty": 1, "dish": "Patatine formaggiose (fries with parmesan)", "guests": ["Andy"] },
+          { "qty": 1, "dish": "Patatine semplici", "guests": ["Rob"] },
+          { "qty": 1, "dish": "Pizza all'aglio", "guests": ["Charlie"] },
+          { "qty": 2, "dish": "Verdure miste", "guests": ["Dave", "Mark"] }
+        ]}
+      ]
+    }
+  ]
+}
