@@ -227,5 +227,24 @@
     "videos": [
       "media/gnocchi-nduja.mp4"
     ]
+  },
+  {
+    "id": "honey-roast-ham-pizza",
+    "name": "Honey Roast Ham Pizza",
+    "price": "",
+    "date": "",
+    "description": "Pizza with our house-made honey roasted ham on a white base, topped with gorgonzola, walnuts and hot honey.",
+    "ingredients": [
+      "House-made honey roasted ham",
+      "White base",
+      "Gorgonzola",
+      "Walnuts",
+      "Hot honey"
+    ],
+    "plating": "Served whole on a round plate, finished with cracked black pepper and chilli flakes.",
+    "photos": [
+      "media/ham-pizza-1.jpg"
+    ],
+    "videos": []
   }
 ]
