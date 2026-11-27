@@ -231,7 +231,7 @@
   {
     "id": "honey-roast-ham-pizza",
     "name": "Honey Roast Ham Pizza",
-    "price": "",
+    "price": 16.5,
     "date": "",
     "description": "Pizza with our house-made honey roasted ham on a white base, topped with gorgonzola, walnuts and hot honey.",
     "ingredients": [
@@ -241,7 +241,7 @@
       "Walnuts",
       "Hot honey"
     ],
-    "plating": "Served whole on a round plate, finished with cracked black pepper and chilli flakes.",
+    "plating": "Finished with cracked black pepper and chilli flakes.",
     "photos": [
       "media/ham-pizza-1.jpg"
     ],
